@@ -1,7 +1,7 @@
 import matplotlib
-# Bắt buộc sử dụng Agg backend cho môi trường không có GUI như QEMU headless
-matplotlib.use('Agg') 
 import matplotlib.pyplot as plt
+# Bắt buộc sử dụng Agg backend cho môi trường không có GUI như QEMU headless
+matplotlib.use('Agg')
 from sensor_sim import SimUltrasonic, SimPotentiometer
 from time import sleep
 
@@ -33,7 +33,7 @@ ax.axhline(y=span, color='r', linestyle='--', linewidth=2, label=f'Span = {span:
 
 # Tô vùng phía dưới ngưỡng Span (vùng cảnh báo)
 ax.fill_between(x, 0, [min(d, span) for d in distances],
-                 alpha=0.2, color='red', label='Vùng Span!')
+alpha=0.2, color='red', label='Vùng Span!')
 
 # Cấu hình nhãn trục, tiêu đề và lưới
 ax.set_title('Ultrasonic Sensor Simulation — Span Detection')
